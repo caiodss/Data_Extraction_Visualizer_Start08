@@ -1,5 +1,6 @@
 
 ArrayList aps;
+PVector[] getAppsPos = new PVector[10];
 
 float center;
 float discAtop;
@@ -20,13 +21,13 @@ stem primaryStem = new stem();
 
 void setup() {
 
-  smooth();
+  //  smooth();
 
   size(800, 600, P3D);
 
   //define center variable
   center = width/2;
-  
+
   //Invoke camera
   camA.prime(1);
 
@@ -45,13 +46,17 @@ void setup() {
 
 void draw() {
 
+  pushMatrix();
+  translate(getAppsPos[3].x, getAppsPos[3].y, getAppsPos[3].z);
+  fill(255, 0, 0);
+  sphere(300);
+  popMatrix();
+
   noStroke();
 
   //Camera
-  camA.update();
-
-  //Background
-  bg.update();
+  camA.upnd
+  bg.updae();
 
   //User
   yourself.update();
